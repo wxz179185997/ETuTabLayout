@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linear_top"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible">
+
+        <com.etu.tablayout.ETuTabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#ffffff"
+            tab:divideer_color="#d1d1d1"
+            tab:divider_padding="10dp"
+            tab:divider_width="1dp"
+            tab:icon_gravity="BOTTOM"
+            tab:icon_height="23dp"
+            tab:icon_margin="2dp"
+            tab:icon_width="23dp"
+            tab:text_selected_color="#2C97DE"
+            tab:text_size="12sp"
+            tab:text_unselected_color="#66000000" />
+    </LinearLayout>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linear_top"
+        android:visibility="visible" />
+
+</RelativeLayout>
